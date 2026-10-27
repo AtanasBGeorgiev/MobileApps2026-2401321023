@@ -1,13 +1,13 @@
 package bg.uni_plovdiv.fmi.ag23.taskscheduler
 
 import android.os.Bundle
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import bg.uni_plovdiv.fmi.ag23.taskscheduler.ui.insert.InsertTaskFragment
-import bg.uni_plovdiv.fmi.ag23.taskscheduler.ui.select.SelectTasksFragment
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,8 +17,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars =
-                insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(
                 systemBars.left,
                 systemBars.top,
@@ -28,22 +27,11 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        findViewById<Button>(R.id.btnInsertFragment).setOnClickListener {
-            showFragment(InsertTaskFragment())
-        }
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navController = navHostFragment.navController
 
-        findViewById<Button>(R.id.btnSelectFragment).setOnClickListener {
-            showFragment(SelectTasksFragment())
-        }
-
-        if (savedInstanceState == null) {
-            showFragment(InsertTaskFragment())
-        }
-    }
-
-    private fun showFragment(fragment: androidx.fragment.app.Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragmentContainer, fragment)
-            .commit()
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNav.setupWithNavController(navController)
     }
 }
