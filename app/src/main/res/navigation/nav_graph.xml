@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/insertTaskFragment">
+
+    <fragment
+        android:id="@+id/insertTaskFragment"
+        android:name="bg.uni_plovdiv.fmi.ag23.taskscheduler.ui.insert.InsertTaskFragment"
+        android:label="Add Task">
+
+        <action
+            android:id="@+id/action_insertTaskFragment_to_selectTasksFragment"
+            app:destination="@id/selectTasksFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectTasksFragment"
+        android:name="bg.uni_plovdiv.fmi.ag23.taskscheduler.ui.select.SelectTasksFragment"
+        android:label="View Tasks">
+
+        <action
+            android:id="@+id/action_selectTasksFragment_to_insertTaskFragment"
+            app:destination="@id/insertTaskFragment" />
+    </fragment>
+
+</navigation>
