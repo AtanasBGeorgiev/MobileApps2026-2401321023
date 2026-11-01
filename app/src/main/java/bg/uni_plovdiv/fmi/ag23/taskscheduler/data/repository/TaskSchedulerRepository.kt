@@ -18,4 +18,12 @@ class TaskSchedulerRepository(private val taskDao: TaskDao) {
             taskDao.searchTasks(filter.query)
         }
     }
+
+    suspend fun update(task: Task) {
+        taskDao.updateTask(task)
+    }
+
+    suspend fun delete(task: Task) {
+        taskDao.deleteTask(task)
+    }
 }
