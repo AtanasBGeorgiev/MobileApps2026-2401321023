@@ -23,6 +23,22 @@
         <action
             android:id="@+id/action_selectTasksFragment_to_insertTaskFragment"
             app:destination="@id/insertTaskFragment" />
+        <action
+            android:id="@+id/action_selectTasksFragment_to_updateTaskFragment"
+            app:destination="@id/updateTaskFragment" />
+        <action
+            android:id="@+id/action_selectTasksFragment_to_deleteTaskFragment"
+            app:destination="@id/deleteTaskFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/updateTaskFragment"
+        android:name="bg.uni_plovdiv.fmi.ag23.taskscheduler.ui.update.UpdateTaskFragment"
+        android:label="Update Task" />
+
+    <fragment
+        android:id="@+id/deleteTaskFragment"
+        android:name="bg.uni_plovdiv.fmi.ag23.taskscheduler.ui.delete.DeleteTaskFragment"
+        android:label="Delete Task" />
 
 </navigation>
