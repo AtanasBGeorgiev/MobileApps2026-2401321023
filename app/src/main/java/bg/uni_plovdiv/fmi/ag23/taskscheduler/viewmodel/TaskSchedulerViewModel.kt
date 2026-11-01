@@ -25,6 +25,14 @@ class TaskSchedulerViewModel(application: Application) : AndroidViewModel(applic
         repository.insert(task)
     }
 
+    fun update(task: Task) = viewModelScope.launch(Dispatchers.IO) {
+        repository.update(task)
+    }
+
+    fun delete(task: Task) = viewModelScope.launch(Dispatchers.IO) {
+        repository.delete(task)
+    }
+
     fun filter(filter: TaskSchedulerFilter): LiveData<List<Task>> {
         return repository.search(filter)
     }
