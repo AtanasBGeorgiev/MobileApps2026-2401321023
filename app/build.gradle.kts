@@ -59,4 +59,7 @@ dependencies {
     implementation("androidx.room:room-ktx:2.8.5")
     ksp("androidx.room:room-compiler:2.8.5")
 
+    // WorkManager
+    implementation("androidx.work:work-runtime-ktx:2.10.0")
+
 }
