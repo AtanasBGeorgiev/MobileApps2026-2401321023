@@ -6,8 +6,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import bg.uni_plovdiv.fmi.ag23.taskscheduler.data.TaskSchedulerDatabase
 import bg.uni_plovdiv.fmi.ag23.taskscheduler.data.entity.Task
-import bg.uni_plovdiv.fmi.ag23.taskscheduler.data.repository.TaskSchedulerRepository
 import bg.uni_plovdiv.fmi.ag23.taskscheduler.data.repository.TaskSchedulerFilter
+import bg.uni_plovdiv.fmi.ag23.taskscheduler.data.repository.TaskSchedulerRepository
+import bg.uni_plovdiv.fmi.ag23.taskscheduler.notification.TaskNotificationScheduler
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -22,15 +23,19 @@ class TaskSchedulerViewModel(application: Application) : AndroidViewModel(applic
     }
 
     fun insert(task: Task) = viewModelScope.launch(Dispatchers.IO) {
-        repository.insert(task)
+        val id = repository.insert(task)
+        val taskWithId = task.copy(id = id)
+        TaskNotificationScheduler.scheduleNotification(getApplication(), taskWithId)
     }
 
     fun update(task: Task) = viewModelScope.launch(Dispatchers.IO) {
         repository.update(task)
+        TaskNotificationScheduler.scheduleNotification(getApplication(), task)
     }
 
     fun delete(task: Task) = viewModelScope.launch(Dispatchers.IO) {
         repository.delete(task)
+        TaskNotificationScheduler.cancelNotification(getApplication(), task.id)
     }
 
     fun filter(filter: TaskSchedulerFilter): LiveData<List<Task>> {
