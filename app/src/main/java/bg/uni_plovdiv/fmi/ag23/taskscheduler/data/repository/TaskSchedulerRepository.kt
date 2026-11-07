@@ -7,8 +7,8 @@ import bg.uni_plovdiv.fmi.ag23.taskscheduler.data.entity.Task
 class TaskSchedulerRepository(private val taskDao: TaskDao) {
     val allTasks: LiveData<List<Task>> = taskDao.getAllTasks()
 
-    suspend fun insert(task: Task) {
-        taskDao.insertTask(task)
+    suspend fun insert(task: Task): Long {
+        return taskDao.insertTask(task)
     }
 
     fun search(filter: TaskSchedulerFilter): LiveData<List<Task>> {
