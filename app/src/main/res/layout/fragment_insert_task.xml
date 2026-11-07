@@ -5,27 +5,32 @@
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:padding="16dp">
 
         <com.google.android.material.textview.MaterialTextView
-            android:layout_width="match_parent"
+            android:id="@+id/titleInsert"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
             android:text="Add New Task"
             android:textAppearance="?attr/textAppearanceHeadlineSmall"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/layoutName"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:layout_marginTop="16dp"
             android:hint="Task Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleInsert"
             app:startIconDrawable="@android:drawable/ic_menu_edit">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -39,10 +44,13 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/layoutDesc"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
             android:hint="Description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutName"
             app:startIconDrawable="@android:drawable/ic_menu_info_details">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -57,10 +65,13 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/layoutDate"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginTop="12dp"
             android:hint="Date &amp; Time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutDesc"
             app:startIconDrawable="@android:drawable/ic_menu_my_calendar">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -75,10 +86,15 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSave"
-            android:layout_width="match_parent"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Save Task" />
+            android:layout_marginTop="24dp"
+            android:text="Save Task"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutDate" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>
