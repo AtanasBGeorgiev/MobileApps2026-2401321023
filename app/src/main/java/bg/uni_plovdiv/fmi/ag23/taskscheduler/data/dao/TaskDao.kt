@@ -15,7 +15,7 @@ interface TaskDao {
     fun getAllTasks(): LiveData<List<Task>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertTask(task: Task)
+    suspend fun insertTask(task: Task): Long
 
     @Query("SELECT * FROM tasks WHERE name LIKE '%' || :query || '%'")
     fun searchTasks(query: String): LiveData<List<Task>>
