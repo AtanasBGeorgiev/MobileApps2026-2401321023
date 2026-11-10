@@ -94,12 +94,12 @@ APK за разпространение: [`/apk/app-release.apk`](apk/app-releas
   ----------------------------------- -------------------------------------------------------
   Добавяне на задача                 ![Добавяне на задача](https://raw.githubusercontent.com/AtanasBGeorgiev/MobileApps2026-2401321023/main/docs/images/task-create.jpg)
   
-  Списък със задачи                   `![Списък със задачи](docs/images/task-list.jpg)`
+  Списък със задачи                   `![Списък със задачи](https://raw.githubusercontent.com/AtanasBGeorgiev/MobileApps2026-2401321023/main/docs/images/task-list.jpg)`
   
-  Редактиране на задача               `![Редактиране на задача](docs/images/task-edit.jpg)`
+  Редактиране на задача               `![Редактиране на задача](https://raw.githubusercontent.com/AtanasBGeorgiev/MobileApps2026-2401321023/main/docs/images/task-edit.jpg)`
 
-  Изтриване на задача                 `![Изтриане на задача](docs/images/task-delete.jpg)`
+  Изтриване на задача                 `![Изтриане на задача](https://raw.githubusercontent.com/AtanasBGeorgiev/MobileApps2026-2401321023/main/docs/images/task-delete.jpg)`
   
-  Известие                            `![Известие](docs/images/task-notification.jpg)`
+  Известие                            `![Известие](https://raw.githubusercontent.com/AtanasBGeorgiev/MobileApps2026-2401321023/main/docs/images/task-notification.jpg)`
   
   -------------------------------------------------------------------------------------------
