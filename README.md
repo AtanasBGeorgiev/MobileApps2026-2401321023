@@ -58,10 +58,9 @@ Fragments автоматично обновяват интерфейса. При
 -   Разрешение за известия на Android.
 
 ### Отваряне и стартиране на телефон
-1.  Отворете https://github.com/AtanasBGeorgiev/MobileApps2026-2401321023/tree/main/apk
-2.  Инсталирайте .apk файла
-3.  Разрешете известия за телефона на приложението
-4.  Започнете работа
+1.  Инсталирайте .apk файла от  [`/apk/app-release.apk`](apk/app-release.apk).
+2.  Разрешете известия за телефона на приложението
+3.  Започнете работа
 
 ### Отваряне и стартиране на компютър
 
@@ -91,15 +90,31 @@ Fragments автоматично обновяват интерфейса. При
 APK за разпространение: [`/apk/app-release.apk`](apk/app-release.apk).
 
 ## Скрийншотове
-  ----------------------------------- -------------------------------------------------------
-  Добавяне на задача                 ![Добавяне на задача](https://raw.githubusercontent.com/AtanasBGeorgiev/MobileApps2026-2401321023/main/docs/images/task-create.jpg)
-  
-  Списък със задачи                   `![Списък със задачи](https://raw.githubusercontent.com/AtanasBGeorgiev/MobileApps2026-2401321023/main/docs/images/task-list.jpg)`
-  
-  Редактиране на задача               `![Редактиране на задача](https://raw.githubusercontent.com/AtanasBGeorgiev/MobileApps2026-2401321023/main/docs/images/task-edit.jpg)`
-
-  Изтриване на задача                 `![Изтриане на задача](https://raw.githubusercontent.com/AtanasBGeorgiev/MobileApps2026-2401321023/main/docs/images/task-delete.jpg)`
-  
-  Известие                            `![Известие](https://raw.githubusercontent.com/AtanasBGeorgiev/MobileApps2026-2401321023/main/docs/images/task-notification.jpg)`
-  
-  -------------------------------------------------------------------------------------------
+<table>
+  <tr>
+    <td align="center">
+      <img src="docs/images/task-create.jpg" width="250" alt="Добавяне на задача">
+      <br><b>Добавяне на задача</b>
+    </td>
+    <td align="center">
+      <img src="docs/images/task-list.jpg" width="250" alt="Списък със задачи">
+      <br><b>Списък със задачи</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="docs/images/task-edit.jpg" width="250" alt="Редактиране на задача">
+      <br><b>Редактиране на задача</b>
+    </td>
+    <td align="center">
+      <img src="docs/images/task-delete.jpg" width="250" alt="Изтриване на задача">
+      <br><b>Изтриване на задача</b>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="2">
+      <img src="docs/images/task-notification.jpg" width="250" alt="Известие">
+      <br><b>Известие</b>
+    </td>
+  </tr>
+</table>
